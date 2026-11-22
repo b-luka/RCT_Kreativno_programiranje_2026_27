@@ -1,4 +1,4 @@
-abstract class Shape {
+abstract class Shape {    // apstraktna klasa služi da bi se iz nje izvele konkretne klase koje imaju zajednička svojstva
   float x;
   float y;
   float size;
@@ -15,7 +15,7 @@ abstract class Shape {
   
   abstract boolean mouseCollision();
 
-  color getCurrentColor() {
+  color getCurrentColor() {  // ako je miš na objektu, promeni mu boju
     if (mouseCollision()) return lerpColor(shapeColor, color(255), 0.4);
     return shapeColor;
   }
@@ -31,7 +31,8 @@ class Circle extends Shape {
     ellipse(x, y, size, size);
   }
   
-  boolean mouseCollision() {
+  // poziciju miša čitamo kroz globalne promenljive mouseX i mouseY
+  boolean mouseCollision() {        // dist za udaljenost od centra
     return dist(mouseX, mouseY,
                 x, y) <= size / 2;
   }
@@ -48,7 +49,7 @@ class Square extends Shape {
     rect(x, y, size, size);
   }
   
-  boolean mouseCollision() {
+  boolean mouseCollision() { // pripada kvadratu ako su x i y udaljene maksimalno size / 2 od centra
     return abs(mouseX - x) <= size / 2 && abs(mouseY - y) <= size / 2;
   }
 }

@@ -8,8 +8,8 @@ class Particle extends Circle {
   Particle(float _x, float _y, color _shapeColor) {
     super(_x, _y, random(4, 12), _shapeColor);
     
-    vx = random(-4, 4);
-    vy = random(-6, 1);
+    vx = random(-4, 4);    // random šansa za levo ili desno
+    vy = random(-6, 1);    // veća šansa da leti nagore
     
     gravity = random(0.08, 0.22);
     maxLifetime = random(40, 110);

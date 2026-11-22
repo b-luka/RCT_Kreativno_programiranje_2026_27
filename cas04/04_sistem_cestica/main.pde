@@ -11,6 +11,6 @@ void draw() {
   ps.display();
 }
 
-void mousePressed() {
+void mousePressed() {    // metoda koja se poziva kada se klikne miš
   ps.burst(mouseX, mouseY, 50, color(250, 140, 25));
 } 

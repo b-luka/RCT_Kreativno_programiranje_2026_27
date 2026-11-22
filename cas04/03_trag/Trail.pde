@@ -13,7 +13,7 @@ class Trail {
   }
   
   void update() {
-    for (int i = count - 1; i > 0; i--) {
+    for (int i = count - 1; i > 0; i--) {    // obavezno unazad!
       circles[i].x = circles[i - 1].x;
       circles[i].y = circles[i - 1].y;
     }
@@ -23,6 +23,6 @@ class Trail {
   }
   
   void display() {
-    for (int i = 0; i < count; i++) circles[i].display();
+    for (int i = count - 1; i >= 0; i--) circles[i].display();
   }
 }

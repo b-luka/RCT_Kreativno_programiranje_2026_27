@@ -12,7 +12,7 @@ class ParticleSystem {
   }
   
   void update() {
-    for (int i = particles.size() - 1; i >= 0; i--) {
+    for (int i = particles.size() - 1; i >= 0; i--) {  // obavezno unazad!
       Particle p = particles.get(i);
       p.update();
       if (p.isDead()) particles.remove(i);
